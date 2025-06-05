@@ -1,0 +1,120 @@
+body {
+  background-color: rgba(128, 128, 128, 0.767);
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px 20px;
+}
+
+.nav-left {
+  position: relative;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  margin-top: 10px;
+  color: #181717;
+  transform: translateX(-50%);
+  margin-left: 20px;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;           
+  height: 4px;
+  margin: 5px 0;         
+  background-color: #181717;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+/* Animation for open state */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(14px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-14px) rotate(-45deg);
+}
+
+#nav-links {
+  display: none;
+  position: absolute;
+  top: 100%; /* right below the hamburger */
+  left: 0;
+  background-color: rgba(128, 128, 128, 0.767);
+  padding: 10px 20px;
+  border-radius: 5px;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 5;
+}
+  
+#nav-links.show {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: block;
+}
+
+li a {
+  font-size: 20px;
+  color: #181717;
+  text-decoration: none;
+}
+
+/* logo */
+
+.logo-name-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.logo {
+  width: 60px;
+  border: black solid 2px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* first block after nav bar */
+
+.firstpart {
+  display: flex;
+}
+
+.right-gallery {
+  display: flex;
+}
